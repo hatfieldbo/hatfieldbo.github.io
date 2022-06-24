@@ -1,0 +1,190 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>Introduction to Database Design</title>
+</head>
+
+<body>
+
+<p><b><font size="5" face="Copperplate Gothic Bold"><span style="mso-bidi-font-size: 10.0pt">Database Design can be divided into 5 stages:</span></font></b></p>
+<ol>
+  <li><strong><font size="4" style="line-height: 150%">Requirements Collection and Analysis</font></strong></li>
+  <li><strong><font size="4" style="line-height: 150%">Conceptual Design</font></strong></li>
+  <li><strong><font size="4" style="line-height: 150%">Logical Design</font></strong></li>
+  <li><strong><font size="4" style="line-height: 150%">Application and Security
+    Design</font></strong></li>
+  <li><strong><font size="4" style="line-height: 150%">Physical Database Design</font></strong></li>
+</ol>
+<p><font size="5"><strong>Requirements Collection and Analysis</strong></font></p>
+
+<ul>
+  <li>    <font size="4">Determine end-user views, outputs, and transaction requirements</font>.    <font size="4">What&nbsp; do
+the users want from the database?</font>
+    <ul>
+      <li><font size="4" style="line-height: 150%">what types of data</font></li>
+      <li><font size="4" style="line-height: 150%">what application</font>
+      </li>
+      <li><font size="4" style="line-height: 150%">what operations and how they
+        affect the performance</font> </li>
+    </ul>
+  </li>
+</ul>
+<p><font size="5"><strong>Conceptual Database Design</strong></font></p>
+
+<ul>
+  <li>
+    <p style="line-height: 150%"><font size="4">High-level description of the
+  data to be stored</font>    
+    <ul>
+      <li><font size="4" style="line-height: 150%">what constraints</font></li>
+      <li><font size="4" style="line-height: 150%">methodologies</font>
+        <ul>
+          <li><font size="4" style="line-height: 150%">goal: to create a simple
+            description of the data that closely match how users and developers
+            think of the data</font></li>
+          <li><font size="4" style="line-height: 150%">use high-level data
+            models/semantic data models</font></li>
+          <li><font size="4" style="line-height: 150%">e.g., In case of Relational modeling,</font>
+            <ul>
+              <li><font size="4" style="line-height: 150%">Define entities, attributes, domains and relationships</font></li>
+              <li><font size="4" style="line-height: 150%">Draw ER/EER diagrams, normalize entity attributes</font> </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p><font size="5"><strong>Logical Database Design</strong> (Database Schema)</font></p>
+<ul>
+  <li><font size="4" style="line-height: 150%">C</font><font size="4">hoose a <strong><a href="Classification of DBMS.html">DBMS</a></strong> to implement the
+    conceptual design</font></li>
+  <li><font size="4" style="line-height: 150%">Convert the conceptual database
+    design into a schema (logical schema) in the DBMS chosen</font>
+    <ul>
+      <li>Map conceptual model to logical model components
+        <ul>
+          <li>Define tables, attributes, relationships and constraits          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+<ul>
+  <ul>
+    <li>Validate logical model using normalization      </li>
+  </ul>
+  <ul>
+    <ul>
+      <li>Normalized set of tables</li>
+    </ul>
+  </ul>
+</ul>
+<ul>
+  <ul>
+    <li>Validate logical modeling integrity constraints
+    </li>
+  </ul>
+  <ul>
+    <ul>
+      <li>Ensure entity and referential integrity</li>
+      <li>Define column constraints</li>
+    </ul>
+  </ul>
+</ul>
+<ul>
+  <ul>
+    <li>Validate logical model against user requirements
+    </li>
+  </ul>
+  <ul>
+    <ul>
+      <li>Ensure the model supports user requirements</li>
+    </ul>
+  </ul>
+</ul>
+<ul>
+  <li><font size="4">Example: If relational data
+    model is chosen, we need to convert ER diagram into a relational database
+  schema </font></li>
+  <li><font size="5" style="line-height: 150%">schema refinement: </font><font size="4">Analyze the logical schema
+    obtained in order to</font>
+  </li>
+  <ul>
+    <li>
+      <p style="line-height: 150%"><font size="4">identify potential problems
+      (e.g., performance criteria, security issues)</font></li>
+    <li>
+      <p style="line-height: 150%"><font size="4">refine the logical schema</font></li>
+    <li>
+      <p style="line-height: 150%"><font size="4">can be guided by theory
+      (e.g., normalization theory)</font></li>
+  </ul>
+</ul>
+<p><font size="5"><strong>Application and Security Design</strong></font></p>
+
+<ul>
+  <li>
+    <p style="line-height: 150%"><font size="4">Application-related (beyond the
+    database itself)</font></li>
+  <li>
+    <p style="line-height: 150%"><font size="4">Code each task in an application
+    language (e.g., Java)</font></li>
+  <li>
+    <p style="line-height: 150%"><font size="4">e.g., Enforcing access rules on
+    entities:</font>
+    <ul>
+      <li>
+        <p style="line-height: 150%"><font size="4">which parts of the database
+        should be accessible to the role of an entity</font></li>
+      <li>
+        <p style="line-height: 150%"><font size="4">which parts should not be
+        accessible to the role of an entity</font></li>
+    </ul>
+  </li>
+</ul>
+<p><font size="5"><strong>Physical Database Design</strong></font></p>
+<ul>
+  <li>    <font size="4">Define data storage organization </font>
+    <ul>
+      <li>Define tables, indexes, and view's physical organization</li>
+    </ul>
+  </li>
+</ul>
+<ul>
+  <li><font size="4">Design integrity and security measures </font>
+    <ul>
+      <li>Define users, security groups, rolesm, and access controls</li>
+    </ul>
+  </li>
+</ul>
+<ul>
+  <li><font size="4">Determine performance measures</font> 
+    <ul>
+      <li>Define database and query execution parameters</li>
+    </ul>
+  </li>
+</ul>
+<ul>
+  <li><font size="4" style="line-height: 150%">e.g.,</font>
+  </li>
+  <ul>
+    <li>
+      <p style="line-height: 150%"><font size="4">building indexes on some
+      tables</font></li>
+    <li>
+      <p style="line-height: 150%"><font size="4">clustering some tables</font></li>
+    <li>
+      <p style="line-height: 150%"><font size="4">redesign part of the schema
+      (if needed)</font></li>
+  </ul>
+</ul>
+<p style="line-height: 150%">&nbsp;</p>
+
+</body>
+
+</html>
